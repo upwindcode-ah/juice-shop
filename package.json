@@ -227,5 +227,6 @@
     "arm64",
     "arm"
   ],
-  "heroku-run-build-script": true
+  "heroku-run-build-script": true,
+  "_diffPrTest": true
 }
