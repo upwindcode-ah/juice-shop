@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: differential-scan-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: differential-scan-test
+  template:
+    metadata:
+      labels:
+        app: differential-scan-test
+    spec:
+      containers:
+        - name: app
+          image: nginx:latest
+          securityContext:
+            privileged: true
+          ports:
+            - containerPort: 80
